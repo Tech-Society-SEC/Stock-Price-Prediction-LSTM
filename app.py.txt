@@ -1,0 +1,27 @@
+from flask import Flask, request, jsonify
+import numpy as np
+import tensorflow as tf
+import joblib
+
+app = Flask(__name__)
+
+# Load the trained model and scaler
+model = tf.keras.models.load_model("stock_price_model.h5")
+scaler = joblib.load("scaler.pkl")
+
+# Function to predict next day stock price
+def predict_next_price(last_60_days):
+    last_60_days_scaled = scaler.transform(last_60_days)
+    last_60_days_scaled = last_60_days_scaled.reshape(1, 60, 1)
+    predicted_price = model.predict(last_60_days_scaled)[0, 0]
+    return scaler.inverse_transform([[predicted_price]])[0, 0]
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = request.json
+    last_60_days = np.array(data["last_60_days"]).reshape(60, 1)
+    predicted_price = predict_next_price(last_60_days)
+    return jsonify({"predicted_price": predicted_price})
+
+if __name__ == "__main__":
+    app.run(debug=True)
