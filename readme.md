@@ -3,17 +3,26 @@ This project is a Stock Price Prediction Web Application that utilizes LSTM (Lon
 
 ## Features:
 ● Fetch Real-time Stock Data using Yahoo Finance API
+
 ● Predict Future Stock Prices using a trained LSTM model
+
 ● Visualize Moving Averages (50-day, 100-day, 200-day)
+
 ● Interactive Web UI using Streamlit
+
 ● Flask API Endpoint for external stock price predictions
 
 ## Technologies Used:
 ●Python
+
 ●TensorFlow/Keras (LSTM Model)
+
 ●Pandas, NumPy (Data Handling)
+
 ●Matplotlib, Streamlit (Visualization & UI)
+
 ●Yahoo Finance API (Stock Data)
+
 ●Flask (API for Predictions)
 
 ## Project Structure:
