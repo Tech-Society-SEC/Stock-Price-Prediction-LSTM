@@ -2,19 +2,19 @@
 This project is a Stock Price Prediction Web Application that utilizes LSTM (Long Short-Term Memory) Neural Networks to forecast stock prices. The web interface is built using Streamlit and allows users to input a stock ticker symbol to visualize historical stock data, moving averages, and predicted stock prices.
 
 ## Features:
-✅ Fetch Real-time Stock Data using Yahoo Finance API
-✅ Predict Future Stock Prices using a trained LSTM model
-✅ Visualize Moving Averages (50-day, 100-day, 200-day)
-✅ Interactive Web UI using Streamlit
-✅ Flask API Endpoint for external stock price predictions
+● Fetch Real-time Stock Data using Yahoo Finance API
+● Predict Future Stock Prices using a trained LSTM model
+● Visualize Moving Averages (50-day, 100-day, 200-day)
+● Interactive Web UI using Streamlit
+● Flask API Endpoint for external stock price predictions
 
 ## Technologies Used:
-Python
-TensorFlow/Keras (LSTM Model)
-Pandas, NumPy (Data Handling)
-Matplotlib, Streamlit (Visualization & UI)
-Yahoo Finance API (Stock Data)
-Flask (API for Predictions)
+●Python
+●TensorFlow/Keras (LSTM Model)
+●Pandas, NumPy (Data Handling)
+●Matplotlib, Streamlit (Visualization & UI)
+●Yahoo Finance API (Stock Data)
+●Flask (API for Predictions)
 
 ## Project Structure:
 📁 Stock-Prediction-App  
